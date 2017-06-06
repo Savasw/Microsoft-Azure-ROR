@@ -23,7 +23,8 @@ var postgres = {
                  type: "get",
                  data: {"date": "'" + $('.date-picker').data('date') + "'"},
                  success: function (response) {
-                     var obj = JSON.parse(response[0].meeting_data);
+                     alert("Success Alert");
+			var obj = JSON.parse(response[0].meeting_data);
                      postgres.meetingData = obj;
                      gMap.resetMap();
                      $.unblockUI()
